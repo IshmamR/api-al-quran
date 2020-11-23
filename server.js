@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
-const data = require('./data/imgData.json');
+// const data = require('./data/imgData.json');
 
 const server = http.createServer((req, res) => {
 	
@@ -18,7 +18,8 @@ const server = http.createServer((req, res) => {
 	else if (path === '/api/imgs' && req.method === 'GET') 
 	{
 		res.writeHead(200, { 'Content-Type': 'application/json' });
-		res.end(JSON.stringify(data));
+		// res.end(JSON.stringify(data));
+		fs.createReadStream('./data/imgData.json').pipe(res);
 	}
 	else if (path === '/page/' && req.method === 'GET')
 	{
