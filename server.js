@@ -17,7 +17,14 @@ const server = http.createServer((req, res) => {
 	}
 	else if (path === '/api/imgs' && req.method === 'GET') 
 	{
-		res.writeHead(200, { 'Content-Type': 'application/json' });
+		// handling CORS
+		const headers = {
+			"Content-Type": "application/json",
+			"Access-Control-Allow-Origin": "*",
+			"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+			"Access-Control-Allow-Methods": "OPTIONS, PUT, POST, PATCH, GET"
+		}
+		res.writeHead(200, headers);
 		// res.end(JSON.stringify(data));
 		fs.createReadStream('./data/imgData.json').pipe(res);
 	}
