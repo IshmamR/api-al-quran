@@ -14,7 +14,7 @@ var obj = { 'items' : [] };
 console.log(obj['items']);
 
 for (var i = 1; i <= 604; i++) {
-	obj['items'][i-1] = { "id": i, "imgURL": `http://localhost:5000/page?p=${i}` };
+	obj['items'][i-1] = { "id": i, "imgURL": `https://api-al-quran.herokuapp.com/page?p=${i}` };
 }
 
 console.log(obj);
