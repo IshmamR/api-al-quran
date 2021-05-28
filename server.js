@@ -27,7 +27,7 @@ app.get('/api/imgs', (req, res) => {
 })
 
 app.get('/api/quran-full', (req, res) => {
-	fs.readFile(path.join(__dirname, '/data/Quran.json'), 'utf-8', (err, data) => {
+	fs.readFile(path.join(__dirname, '/data/Quran-min.json'), 'utf-8', (err, data) => {
 		if(!err) res.status(200).json(JSON.parse(data));
 		else {
 			res.status(404).json({error: '404 not found'})
