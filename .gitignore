@@ -1,2 +1,5 @@
 /node_modules
 index.js
+/db-backup
+curl-format.txt
+tests.text
