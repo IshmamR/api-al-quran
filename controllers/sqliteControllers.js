@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const rootDir = process.env.PWD;
-const db = require('../sqliteModel.js');
+const db = require('../models/sqliteModel.js');
 
 const getFullQuranV2 = (req, res) => {
 	var ayahs;
