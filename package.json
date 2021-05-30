@@ -1,13 +1,13 @@
 {
 	"name": "quran-site",
 	"version": "1.0.0",
-	"description": "A Quran reading web-app",
+	"description": "An API with all data of Quran.",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
 		"dev": "nodemon server.js"
 	},
-	"author": "",
+	"author": "Ishmam Rahman",
 	"license": "ISC",
 	"devDependencies": {
 		"nodemon": "^2.0.6"
